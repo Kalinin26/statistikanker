@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistische Methoden: SPSS, R &amp; JASP | Statistik Anker</title>
+<meta name="description" content="Von t-Test, ANOVA und Regression bis Mediation, Moderation, Faktorenanalyse und SEM: Statistik-Hilfe in SPSS, R, Python und JASP.">
+<link rel="canonical" href="https://statistikanker.de/methoden.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Statistische Methoden: SPSS, R &amp; JASP | Statistik Anker">
+<meta property="og:description" content="Von t-Test, ANOVA und Regression bis Mediation, Moderation, Faktorenanalyse und SEM: Statistik-Hilfe in SPSS, R, Python und JASP.">
+<meta property="og:url" content="https://statistikanker.de/methoden.html">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts.css">
+<style>
+body{margin:0}
+a{color:#2F6DB5}a:hover{color:#1F4F87}
+li::marker{color:#E07A2E}
+
+*:focus-visible{outline:3px solid #E07A2E;outline-offset:2px}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #F5F7FA; color: #1E2B36; font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; font-size: 17px; line-height: 1.6">
+
+<header style="position: sticky; top: 0; z-index: 20; background: #FFFFFF; border-bottom: 1px solid #DDE5EE">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px">
+<a href="index.html" aria-label="Statistik Anker, zur Startseite" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
+<svg width="40" height="40" viewBox="0 0 120 120" fill="none" aria-hidden="true"><rect width="120" height="120" rx="26" fill="#0F2C44"></rect><rect x="40" y="36" width="9" height="12" rx="1.5" fill="#E07A2E"></rect><rect x="55.5" y="28" width="9" height="20" rx="1.5" fill="#E07A2E"></rect><rect x="71" y="20" width="9" height="28" rx="1.5" fill="#E07A2E"></rect><path d="M34 52 H86 M60 52 V98 M30 76 Q34 100 60 100 Q86 100 90 76 M23 83 L30 76 L37 82 M83 82 L90 76 L97 83" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span style="font-size: 22px; color: #0F2C44; letter-spacing: -0.02em"><span style="font-weight: 500">Statistik</span><span style="font-weight: 800">Anker</span></span>
+</a>
+<nav aria-label="Hauptmenü" style="display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 15px; font-weight: 600">
+<a href="index.html" style="color: #0F2C44; text-decoration: none; padding: 10px 0">Start</a>
+<a href="leistungen.html" style="color: #0F2C44; text-decoration: none; padding: 10px 0">Leistungen</a>
+<a href="methoden.html" aria-current="page" style="color: #2F6DB5; text-decoration: underline; text-decoration-color: #E07A2E; text-decoration-thickness: 3px; text-underline-offset: 8px; padding: 10px 0">Methoden</a>
+<a href="preise.html" style="color: #0F2C44; text-decoration: none; padding: 10px 0">Preise</a>
+<a href="ueber-mich.html" style="color: #0F2C44; text-decoration: none; padding: 10px 0">Über mich</a>
+<a href="kontakt.html" style="color: #0F2C44; text-decoration: none; padding: 10px 0">Kontakt</a>
+</nav>
+<a href="kontakt.html" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 10px; background: #E07A2E; color: #0F2C44; font-size: 15px; font-weight: 700; text-decoration: none">Termin vereinbaren</a>
+</div>
+</header>
+
+<section style="position: relative; overflow: hidden; background: #2F6DB5">
+<svg aria-hidden="true" viewBox="0 0 600 260" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; right: -10px; top: 50%; transform: translateY(-50%); width: min(620px, 75%); height: auto; opacity: 0.2"><path d="M40 230 H300 M40 230 V40"></path><path d="M55 215 L290 65"></path><g fill="#FFFFFF" stroke="none"><circle cx="70" cy="200" r="5"></circle><circle cx="90" cy="214" r="5"></circle><circle cx="105" cy="180" r="5"></circle><circle cx="130" cy="186" r="5"></circle><circle cx="150" cy="150" r="5"></circle><circle cx="170" cy="162" r="5"></circle><circle cx="190" cy="128" r="5"></circle><circle cx="215" cy="136" r="5"></circle><circle cx="235" cy="100" r="5"></circle><circle cx="255" cy="110" r="5"></circle><circle cx="275" cy="76" r="5"></circle></g><path d="M330 230 C400 230 410 50 460 50 C510 50 520 230 590 230"></path><path d="M460 50 V230" stroke-dasharray="6 9"></path><path d="M400 230 V176 M520 230 V176" stroke-dasharray="4 8"></path></svg>
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 14px">
+<h1 style="margin: 0; padding-top: 20px; background: linear-gradient(#E07A2E, #E07A2E) left top / 56px 6px no-repeat; font-size: 46px; line-height: 1.12; color: #FFFFFF; letter-spacing: -0.02em">Statistische Methoden &amp; Software</h1>
+<p style="margin: 0; font-size: 19px; color: #EAF1F9; max-width: 680px">Von t-Test und ANOVA über Regression bis zum Strukturgleichungsmodell: Diese Verfahren decke ich ab – mit SPSS-Hilfe, R-Hilfe, Python und JASP.</p>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Deskriptive Statistik &amp; Datenaufbereitung</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Häufigkeiten, Mittelwerte, Streuungsmaße</li><li>Ausreißer und fehlende Werte</li><li>Umkodieren und Skalenbildung</li><li>Prüfung von Verteilungsannahmen</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="5" height="10" rx="1"></rect><rect x="14" y="5" width="5" height="14" rx="1"></rect></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Gruppenvergleiche</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>t-Tests (unabhängig und abhängig)</li><li>Ein- und mehrfaktorielle ANOVA</li><li>Messwiederholung und Mixed ANOVA</li><li>ANCOVA und MANOVA</li><li>Post-hoc-Tests und Kontraste</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Nichtparametrische Verfahren</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Mann-Whitney-U und Wilcoxon</li><li>Kruskal-Wallis und Friedman</li><li>Chi-Quadrat-Test</li><li>Spearman- und Kendall-Korrelation</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19L20 5"></path><circle cx="7" cy="13" r="1.3"></circle><circle cx="11" cy="15" r="1.3"></circle><circle cx="14" cy="8" r="1.3"></circle><circle cx="18" cy="11" r="1.3"></circle></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Zusammenhänge &amp; Regression</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Pearson- und Partialkorrelation</li><li>Multiple und hierarchische Regression</li><li>Logistische Regression</li><li>Regressionsdiagnostik</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="17" r="2.2"></circle><circle cx="19" cy="17" r="2.2"></circle><circle cx="12" cy="6" r="2.2"></circle><path d="M7.2 17h9.6M6.2 15.2l4.6-7.2M13.2 8l4.6 7.2"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Mediation &amp; Moderation</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Einfache, parallele und serielle Mediation</li><li>Moderation mit Simple Slopes</li><li>Moderierte Mediation</li><li>PROCESS (Hayes)</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4V2.8h6V4"></path><path d="M8.5 11l2 2 4-4"></path><path d="M8.5 17h7"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Fragebögen &amp; Psychometrie</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Exploratorische Faktorenanalyse (EFA)</li><li>Konfirmatorische Faktorenanalyse (CFA)</li><li>Reliabilität (Cronbachs α, McDonalds ω)</li><li>Itemanalyse und Messinvarianz</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Fortgeschrittene Modelle</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Strukturgleichungsmodelle (SEM) mit lavaan</li><li>Mehrebenenmodelle / Mixed Models</li><li>Längsschnittanalysen</li><li>Clusteranalyse</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #2F6DB5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r="0.8"></circle></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Studienplanung</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Poweranalyse mit G*Power</li><li>Stichprobenplanung</li><li>Auswertungsplan für das Exposé</li><li>Effektstärken und Konfidenzintervalle</li></ul></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px"><h2 style="margin: 0; padding-top: 16px; background: linear-gradient(#E07A2E, #E07A2E) left top / 48px 5px no-repeat; font-size: 30px; line-height: 1.2; color: #0F2C44">Marktforschungs- &amp; Marketing-Methoden</h2><p style="margin: 0; color: #44525E; max-width: 760px">Für Abschlussarbeiten in Marketing, Wirtschaftspsychologie oder Konsumentenforschung, mit Erfahrung aus der Marktforschungspraxis.</p></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #E07A2E; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F2C44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"></rect><rect x="13" y="4" width="7" height="7" rx="1"></rect><rect x="4" y="13" width="7" height="7" rx="1"></rect><rect x="13" y="13" width="7" height="7" rx="1"></rect></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Conjoint-Analyse</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Choice-Based Conjoint (CBC)</li><li>Teilnutzenwerte und Attributwichtigkeiten</li><li>Marktsimulationen</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #E07A2E; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F2C44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20V5M4 9l4-4 4 4M16 4v15M12 15l4 4 4-4"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">MaxDiff</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Best-Worst-Scaling</li><li>Präferenz-Rankings</li><li>Hierarchical-Bayes-Schätzung</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #E07A2E; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F2C44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12z"></path><circle cx="7.5" cy="7.5" r="1.3"></circle></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Van Westendorp (PSM)</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Price Sensitivity Meter</li><li>Akzeptable Preisspanne</li><li>Optimaler Preispunkt</li></ul></div>
+<div style="background: #FFFFFF; border: 1px solid #DDE5EE; border-radius: 18px; padding: 32px; display: flex; flex-direction: column; gap: 14px"><div style="width: 52px; height: 52px; border-radius: 14px; background: #E07A2E; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F2C44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v9h9"></path></svg></div><h3 style="margin: 0; font-size: 20px; color: #0F2C44">Treiber- &amp; Segmentanalysen</h3><ul style="margin: 0; padding-left: 20px; color: #44525E; display: flex; flex-direction: column; gap: 4px"><li>Key-Driver-Analyse</li><li>Segmentierung per Clusteranalyse</li><li>Zielgruppenprofile</li></ul></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="font-weight: 700; color: #0F2C44; margin-right: 6px">Software:</span><span style="padding: 6px 14px; border-radius: 999px; background: #EAF1F9; color: #1F4F87; font-weight: 600; font-size: 15px">SPSS</span><span style="padding: 6px 14px; border-radius: 999px; background: #EAF1F9; color: #1F4F87; font-weight: 600; font-size: 15px">R / RStudio</span><span style="padding: 6px 14px; border-radius: 999px; background: #EAF1F9; color: #1F4F87; font-weight: 600; font-size: 15px">Python</span><span style="padding: 6px 14px; border-radius: 999px; background: #EAF1F9; color: #1F4F87; font-weight: 600; font-size: 15px">JASP</span></div>
+</div>
+</section>
+<section style="background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; padding-top: 16px; background: linear-gradient(#E07A2E, #E07A2E) left top / 48px 5px no-repeat; font-size: 34px; line-height: 1.2; color: #0F2C44">Vom Skalenniveau zum passenden Verfahren</h2>
+<p style="margin: 0; font-size: 18px; color: #44525E">Die richtige Methode hängt von deiner Fragestellung, dem Skalenniveau deiner Variablen und deinem Studiendesign ab. Ich helfe dir, diese Entscheidungen sauber zu begründen, damit dein Methodenteil auch kritischen Rückfragen standhält.</p>
+</div>
+<figure style="margin: 0; display: flex; justify-content: center">
+<svg viewBox="0 0 380 280" width="100%" role="img" aria-label="Illustration: Entscheidungsbaum von der Hypothese über Unterschied oder Zusammenhang zum passenden Verfahren" style="display: block; max-width: 440px; height: auto">
+<circle cx="190" cy="140" r="130" fill="#EAF1F9"></circle>
+<path d="M190 70 L95 120 M190 70 L285 120 M95 156 L60 205 M95 156 L130 205 M285 156 L250 205" stroke="#2F6DB5" stroke-width="3"></path>
+<path d="M190 70 L285 120 M285 156 L320 205" stroke="#E07A2E" stroke-width="4"></path>
+<rect x="135" y="30" width="110" height="40" rx="10" fill="#0F2C44"></rect>
+<rect x="40" y="120" width="110" height="36" rx="10" fill="#FFFFFF" stroke="#2F6DB5" stroke-width="2"></rect>
+<rect x="230" y="120" width="110" height="36" rx="10" fill="#FFFFFF" stroke="#E07A2E" stroke-width="3"></rect>
+<rect x="22" y="205" width="76" height="32" rx="8" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="2"></rect>
+<rect x="92" y="205" width="76" height="32" rx="8" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="2"></rect>
+<rect x="212" y="205" width="76" height="32" rx="8" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="2"></rect>
+<rect x="282" y="205" width="76" height="32" rx="8" fill="#E07A2E"></rect>
+<g font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="13" font-weight="700" text-anchor="middle"><text x="190" y="55" fill="#FFFFFF">Hypothese</text><text x="95" y="143" fill="#0F2C44">Unterschied</text><text x="285" y="143" fill="#0F2C44">Zusammenhang</text></g>
+<g font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" fill="#0F2C44"><text x="60" y="225">t-Test</text><text x="130" y="225">ANOVA</text><text x="250" y="225">Regression</text><text x="320" y="225">Mediation</text></g>
+</svg>
+</figure>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px">
+<div style="background: #2F6DB5; border-radius: 24px; padding: 48px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 640px"><h2 style="margin: 0; font-size: 30px; line-height: 1.2; color: #FFFFFF">Welches Verfahren passt zu deiner Arbeit?</h2><p style="margin: 0; font-size: 18px; color: #EAF1F9">Das klären wir im kostenlosen 30-Minuten-Gespräch.</p></div>
+<a href="kontakt.html" style="display: inline-flex; align-items: center; min-height: 52px; box-sizing: border-box; padding: 14px 28px; border-radius: 12px; background: #E07A2E; color: #0F2C44; font-size: 17px; font-weight: 700; text-decoration: none">Termin vereinbaren</a>
+</div>
+</div>
+</section>
+<footer style="background: #0F2C44; color: #FFFFFF; border-top: 5px solid #E07A2E; font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, Arial, sans-serif; font-size: 17px; line-height: 1.6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="36" height="36" viewBox="0 0 120 120" fill="none" aria-hidden="true"><rect width="120" height="120" rx="26" fill="#FFFFFF"></rect><rect x="40" y="36" width="9" height="12" rx="1.5" fill="#E07A2E"></rect><rect x="55.5" y="28" width="9" height="20" rx="1.5" fill="#E07A2E"></rect><rect x="71" y="20" width="9" height="28" rx="1.5" fill="#E07A2E"></rect><path d="M34 52 H86 M60 52 V98 M30 76 Q34 100 60 100 Q86 100 90 76 M23 83 L30 76 L37 82 M83 82 L90 76 L97 83" stroke="#0F2C44" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size: 23px"><span style="font-weight: 500">Statistik</span><span style="font-weight: 800">Anker</span></span></div>
+<p style="margin: 0; font-size: 17px; color: #C5D3DE">Statistikberatung und Coaching für Abschlussarbeiten. Online per Zoom oder Teams.</p>
+<p style="margin: 0; font-size: 17px; color: #C5D3DE">Vakhtang Kalinin<br>Wandsbeker Chaussee 121b<br>22089 Hamburg</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 17px">
+<div style="font-weight: 700; margin-bottom: 4px">Seiten</div>
+<a href="leistungen.html" style="color: #C5D3DE">Leistungen</a>
+<a href="methoden.html" style="color: #C5D3DE">Methoden</a>
+<a href="preise.html" style="color: #C5D3DE">Preise</a>
+<a href="ueber-mich.html" style="color: #C5D3DE">Über mich</a>
+<a href="kontakt.html" style="color: #C5D3DE">Kontakt</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 17px">
+<div style="font-weight: 700; margin-bottom: 4px">Kontakt</div>
+<a href="mailto:info@statistikanker.de" style="color: #C5D3DE">info@statistikanker.de</a>
+<span style="color: #C5D3DE">WhatsApp / Telegram: 0176 25992841</span>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px 28px; border-top: 1px solid #2A4A66; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; color: #C5D3DE">
+<span>© 2026 Statistik Anker</span>
+<a href="impressum.html" style="color: #C5D3DE">Impressum</a>
+<a href="datenschutz.html" style="color: #C5D3DE">Datenschutz</a>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>
